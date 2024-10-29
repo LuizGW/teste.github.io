@@ -1,0 +1,116 @@
+:root { /* paleta de cores para ser utilizado no site*/
+    --verde-escuro: #407324;
+    --azul: #60A4BF;
+    --verde-pastel: #C0DFB7;
+    --verde-3: #025939;
+    --amarelinho: #F2C53D;
+    --marrom: #422724;
+    --branco: #fff;
+  }
+
+body {
+   position: relative;
+    
+ }
+
+ #background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background-image: url(imagens/img-homepage.png);
+    background-size: 100% auto;
+    background-repeat: no-repeat;
+    background-position: center top;
+    filter: blur(5px);
+}
+ .conteudo {
+    display: flex;
+    justify-content: center;
+    
+ }
+
+#text1 {
+    margin-top: 50px;
+     font-size: 80px;
+    font-family: "Signika Negative", sans-serif;
+    font-optical-sizing: auto;
+   border: solid black;
+    color: var();
+}
+
+#botao {
+   
+    width: 20em;
+    border-radius: 15px;
+    margin-top: 3em;
+    height: 8em;
+    font-size: 30px;
+    vertical-align: middle;
+    background-color: var(--amarelinho);
+    transition: transform 0.2s; /* Adicione uma transição suave para o efeito */
+   }
+   
+   
+   input[type="submit"]:hover {
+     transform: scale(1.15); /* Aumenta o tamanho do botão em 15% no hover */
+     transition: 1s;
+   }
+
+.campo-inicial {
+    display: flex;
+    width: 98vw;
+    height: 80vh;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+@media screen and (max-width: 1110px) {
+    
+    #background {
+        background-image: none;
+    }
+    
+}
+
+
+@media screen and (max-width: 945px) {
+
+    
+}
+
+@media screen and (max-width: 768px) {
+    #text1 {
+        margin-top: 50px;
+         font-size: 60px;
+        font-family: "Signika Negative", sans-serif;
+        font-optical-sizing: auto;
+       border: solid black;
+        color: var();
+    }
+
+    #botao {
+        width: 15em;  
+        height: 8em;
+        font-size: 30px;
+       
+       }
+       
+}
+
+@media screen and (max-width: 460px) {
+    #botao {
+        width: 10em;  
+        height: 5em;
+        font-size: 20px;
+
+       }
+}
+
+@media screen and (max-width: 375px) {
+    
+       
+}

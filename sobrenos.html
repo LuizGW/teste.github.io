@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+  
+    <!-- <link rel="stylesheet" href="reset.css"> -->
+    <title>Sobre Nós</title>
+</head>
+
+<body>
+    <div class="header" id="header">
+        <button onclick="alternaBarraLateral()" class="icone_header">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-list"
+                viewBox="0 0 16 16">
+                <path fill-rule="evenodd"
+                    d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z" />
+            </svg>
+        </button>
+        <div class="logo_header">
+            <a href="index.html"><img src="imagens/logo-projeto.png" alt="planta" id="logo"></a>
+        </div>
+
+        <div class="hud_de_navegacao" id="hud_de_navegacao">
+            <button onclick="alternaBarraLateral()" class="icone_header">
+                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-x"
+                    viewBox="0 0 16 16">
+                    <path
+                        d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z" />
+                </svg>
+            </button>
+            <a href="index.html">Home</a>
+            <a href="contato.html">Página de contato</a>
+            <a href="produtos.html">Produtos</a>
+            <a href="sobrenos.html">Sobre Nós</a>
+            
+        </div>
+    </div>
+    <div tabindex="0" onclick="fechaBarraLateral()" class="conteudo" id="conteudo">
+        
+        <!-- <img src="imagens/laterais-contato.jpg" alt="imagem-teste" class="imagem_grande_homepage"> -->
+        <h1 id="sobre-nos">Quem somos Nós?</h1>
+        <p id="paragrafo-sobre-nos">Bem-vindo a Cultiva, onde sua saúde e o meio ambiente estão em primeiro lugar. Somos um aplicativo dedicado a trazer para a sua mesa os melhores produtos orgânicos, fresquinhos e cultivados com carinho. Acreditamos que uma alimentação saudável deve ser acessível a todos, e por isso, trabalhamos diretamente com agricultores locais que compartilham nosso compromisso com práticas sustentáveis e qualidade superior.</p>
+        <h1 id="sobre-nos">O que fazemos?</h1>
+        <p id="paragrafo-sobre-nos">Nossa missão é facilitar sua jornada em direção a uma vida mais saudável, oferecendo uma seleção cuidadosa de frutas, verduras, grãos e outros alimentos orgânicos que respeitam o ciclo natural da Terra. Com Cultiva, você pode confiar que está fazendo a escolha certa para sua saúde e para o planeta.
+
+            Junte-se a nós e descubra como é simples e conveniente ter o melhor da agricultura orgânica ao seu alcance. Sua saúde e o futuro do nosso planeta agradecem!</p>
+    </div>
+
+
+</body>
+<footer>
+    <img src="imagens/s-5.png" alt="logo cultiva " id="imagem-footer">
+    <p class="copyright">&copy; Copyright Cultiva - 2024</p>
+</footer>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script>
+    var header = document.getElementById('header');
+    var hud_de_navegacao = document.getElementById('hud_de_navegacao');
+    var conteudo = document.getElementById('conteudo');
+    var mostraBarraLateral = false;
+
+    function alternaBarraLateral() {
+        mostraBarraLateral = !mostraBarraLateral;
+        if (mostraBarraLateral) {
+            hud_de_navegacao.style.marginLeft = '-10vw';
+            hud_de_navegacao.style.animationName = 'mostraBarraLateral';
+            conteudo.style.filter = 'blur(3px)';
+        } 
+        else {
+            hud_de_navegacao.style.marginLeft = '-100vw';
+            hud_de_navegacao.style.animationName = '';
+            conteudo.style.filter = '';
+        }
+    }
+
+    function fechaBarraLateral() {
+        if(mostraBarraLateral) {
+            alternaBarraLateral();
+        }
+    }
+
+    window.addEventListener('resize', function(event) {
+        if(window.innerWidth > 768 && mostraBarraLateral) 
+        {
+            alternaBarraLateral();
+        }
+    });
+</script>
+
+</html>

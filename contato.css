@@ -1,0 +1,61 @@
+/* Estilização da página de contato */
+body {
+   /* background-image: url(imagens/laterais-contato3.jpg);
+   ; */
+}
+
+
+#contato-conosco{
+color: black;
+
+}
+.campo-de-dados {
+    display: flex;
+    text-align: center;
+    align-items: center;
+    flex-direction: column;
+   }
+  
+   .campos-de-preenchimento {
+    padding-top: 3em;
+    color: var(--marrom);
+    font-weight: bold;
+   }
+   
+   
+   input {
+    height: 30px;
+    border: solid var(--marrom);
+    border-radius: 20px; /* Ajuste o raio dos campos de dados */
+    text-align: center;
+    width: 20em;
+   }
+   input[type="button"]{
+    border-radius: 10px;
+    transition: 0.5s;
+   }
+   #msg_campo-de-dados {
+    height: 5em;
+    border-radius: 0 15px 15px 15px;
+    text-align: initial;
+   }
+  
+   input::placeholder {
+    color: #999; /* Altere a cor */
+    font-style: italic; /* Altera o estilo da fonte*/
+    text-align: center;
+  }
+  
+  #botao {
+   margin-top: 3em;
+   height: 4em;
+   vertical-align: middle;
+   background-color: var(--amarelinho);
+   transition: transform 0.2s; /* Adicione uma transição suave para o efeito */
+  }
+  
+  
+  input[type="submit"]:hover {
+    transform: scale(1.15); /* Aumenta o tamanho do botão em 15% no hover */
+    transition: 1s;
+  }
